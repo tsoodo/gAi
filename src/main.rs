@@ -28,7 +28,7 @@ struct Args {
     model: String,
 
     /// Temperature for generation (0.0-2.0, default: 0.7)
-    #[arg(short, long, default_value = "1")]
+    #[arg(short, long, default_value = "0.7")]
     temperature: f32,
 }
 
@@ -115,7 +115,7 @@ async fn generate_commit_message(model: &str, temperature: f32) -> Result<String
             },
             Message {
                 role: "user".to_string(),
-                content: format!("Generate a concise git commit message for the following diff:\n\n{}", diff),
+                content: format!("Generate a very small & concise git commit message for the following diff:\n\n{}", diff),
             },
         ],
         temperature,
