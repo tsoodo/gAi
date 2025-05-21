@@ -39,7 +39,7 @@ gai --generate --temperature 1.2
 ```
 
 ---
-![gai_vid](./vid.gif)
+![gai_vid](./fast.gif)
 ---
 
 ## ⚙️ Requirements
