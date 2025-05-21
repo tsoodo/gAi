@@ -38,6 +38,10 @@ gai --generate --model gpt-4
 gai --generate --temperature 1.2
 ```
 
+---
+![gai_vid](./ovid.webm)
+---
+
 ## ⚙️ Requirements
 
 - Rust and Cargo
