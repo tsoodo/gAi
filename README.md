@@ -12,7 +12,7 @@ gAi connects the power of OpenAI with Git to automatically create meaningful com
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/gai.git
+git clone https://github.com/tsoodo/gai.git
 cd gai
 
 # Create .env file with your OpenAI API key
@@ -39,8 +39,8 @@ gai --generate --temperature 1.2
 ```
 
 ---
-![gai_vid](./fast.gif)
----
+
+## ![gai_vid](./fast.gif)
 
 ## ⚙️ Requirements
 

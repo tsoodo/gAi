@@ -23,11 +23,11 @@ struct Args {
     #[arg(short, long)]
     commit: bool,
 
-    /// Model to use (default: gpt-3.5-turbo)
+    /// Model to use (default: o4-mini)
     #[arg(short, long, default_value = "o4-mini")]
     model: String,
 
-    /// Temperature for generation (0.0-2.0, default: 0.7)
+    /// Temperature for generation (0.0-2.0, default: 1)
     #[arg(short, long, default_value = "1")]
     temperature: f32,
 }
