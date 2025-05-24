@@ -4,7 +4,6 @@ use dotenv::dotenv;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use std::env;
-use std::fs;
 use std::process::Command;
 
 #[derive(Parser, Debug)]
@@ -63,12 +62,8 @@ struct OpenAIError {
     message: String,
 }
 
-fn load_system_prompt() -> String {
-    fs::read_to_string("commit_prompt.txt")
-        .unwrap_or_else(|_| {
-            eprintln!("Warning: Could not read commit_prompt.txt, using default prompt");
-            "You are a helpful assistant that generates concise git commit messages.".to_string()
-        })
+fn load_system_prompt() -> &'static str {
+    include_str!("../commit_prompt.txt")
 }
 
 #[tokio::main]
@@ -123,7 +118,7 @@ async fn generate_commit_message(model: &str, temperature: f32) -> Result<String
         messages: vec![
             Message {
                 role: "system".to_string(),
-                content: system_prompt,
+                content: system_prompt.to_string(),
             },
             Message {
                 role: "user".to_string(),
