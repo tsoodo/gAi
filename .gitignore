@@ -1,2 +1,6 @@
-/target
+target/
+debut/
+.DS_Store
 .env
+
+
