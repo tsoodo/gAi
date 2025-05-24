@@ -1,8 +1,8 @@
-![gAi](./gai.png)
+![gAi](./pics/gai.png)
 
 # gAi 🤖📝
 
-![gitisgai](./pic.png)
+![gitisgai](./pics/pic.png)
 
 A powerful CLI tool written in Rust that generates git commit messages using AI.
 

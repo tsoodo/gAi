@@ -63,7 +63,7 @@ struct OpenAIError {
 }
 
 fn load_system_prompt() -> &'static str {
-    include_str!("../commit_prompt.txt")
+    include_str!("commit_prompt.txt")
 }
 
 #[tokio::main]
