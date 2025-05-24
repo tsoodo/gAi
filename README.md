@@ -1,10 +1,11 @@
 ![gAi](./pics/gai.png)
 
 # gAi 🤖📝
+[![Rust](https://github.com/tsoodo/git-is-gai/actions/workflows/rust.yml/badge.svg)](https://github.com/tsoodo/git-is-gai/actions/workflows/rust.yml)
 
 ![gitisgai](./pics/pic.png)
 
-A powerful CLI tool written in Rust that generates git commit messages using AI.
+**A powerful CLI tool written in Rust that generates git commit messages using AI.**
 
 ## 🦀 Overview
 
