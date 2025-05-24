@@ -2,6 +2,8 @@
 
 # gAi 🤖📝
 
+![gitisgai](./pic.png)
+
 A powerful CLI tool written in Rust that generates git commit messages using AI.
 
 ## 🦀 Overview
@@ -39,8 +41,6 @@ gai --generate --temperature 1.2
 ```
 
 ---
-
-## ![gai_vid](./fast.gif)
 
 ## ⚙️ Requirements
 
