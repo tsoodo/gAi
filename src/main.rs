@@ -109,13 +109,56 @@ async fn generate_commit_message(model: &str, temperature: f32) -> Result<String
     let request = OpenAIRequest {
         model: model.to_string(),
         messages: vec![
-            Message {
-                role: "system".to_string(),
-                content: "You are a helpful assistant that generates concise, meaningful git commit messages based on code diffs. Format your response as a single line, conventional commit message.".to_string(),
+    Message {
+        role: "system".to_string(),
+        content: "You are an expert at writing conventional git commit messages. Analyze code diffs and generate a single, concise commit message following the format: <type>[optional scope]: <description>
+                    COMMIT TYPES:
+                    - **feat**: A new feature for the user
+                    - **fix**: A bug fix  
+                    - **docs**: Documentation only changes
+                    - **style**: Changes that don't affect code meaning (whitespace, formatting, semicolons)
+                    - **refactor**: Code change that neither fixes a bug nor adds a feature
+                    - **test**: Adding missing tests or correcting existing tests
+                    - **chore**: Changes to build process, auxiliary tools, or maintenance
+                    - **perf**: Performance improvements
+                    - **ci**: Changes to CI configuration files and scripts
+                    - **build**: Changes affecting the build system or external dependencies
+                    - **revert**: Reverts a previous commit
+
+                    EXAMPLES:
+                    feat: add user authentication system
+                    feat(auth): implement password reset functionality
+                    fix: resolve memory leak in data processing
+                    fix(api): handle null response from external service
+                    docs: update API documentation
+                    docs(readme): add installation instructions
+                    style: fix indentation in user service
+                    style(css): update button hover effects
+                    refactor: extract validation logic into separate module
+                    refactor(utils): simplify date formatting functions
+                    test: add unit tests for payment processing
+                    test(integration): add API endpoint tests
+                    chore: update dependencies
+                    chore(deps): bump lodash from 4.17.19 to 4.17.21
+                    perf: improve database query efficiency
+                    perf(images): optimize image loading algorithm
+                    ci: add automated testing workflow
+                    ci(github): update deployment pipeline
+                    build: update webpack configuration
+                    build(npm): add new build script
+                    revert: revert \"feat: add experimental feature\"
+
+                    RULES:
+                    - Keep description under 50 characters when possible
+                    - Use imperative mood (add, fix, update, not added, fixed, updated)
+                    - Don't end with a period
+                    - Focus on WHAT changed, not HOW
+                    - If multiple types of changes, pick the most significant one
+                    - Use scope in parentheses when appropriate (component, file, or area affected)".to_string(),
             },
             Message {
                 role: "user".to_string(),
-                content: format!("Generate a very small & concise git commit message for the following diff:\n\n{}", diff),
+                content: format!("Generate a conventional commit message for this diff:\n\n{}", diff),
             },
         ],
         temperature,
