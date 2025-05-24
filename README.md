@@ -51,3 +51,9 @@ gai --generate --temperature 1.2
 ## 📋 License
 
 MIT
+
+## Disclaimer
+i just found out today (**2025-05-24**) that some other guy literally already did this and with the same name. So heres a link to that lmao. 
+
+[github](https://github.com/dpecos/gai)
+[lib.rs](https://lib.rs/crates/gai)
