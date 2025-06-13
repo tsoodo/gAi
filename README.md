@@ -3,7 +3,7 @@
 # gitai 🤖📝
 [![Rust](https://github.com/tsoodo/gitai/actions/workflows/rust.yml/badge.svg)](https://github.com/tsoodo/gitai/actions/workflows/rust.yml)
 
-![gitai_screenshot](./pics/pic.png)
+![gitai_screenshot](./pics/example.png)
 
 **A powerful CLI tool written in Rust that generates git commit messages using AI.**
 
