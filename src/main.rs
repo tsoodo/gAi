@@ -8,7 +8,7 @@ use std::process::Command;
 
 #[derive(Parser, Debug)]
 #[command(
-    name = "gAi",
+    name = "gitai",
     author = "Ian Irizarry",
     version = "0.1.0",
     about = "Generate AI-powered git commit messages from your diffs",
@@ -90,10 +90,10 @@ async fn main() -> Result<()> {
             println!("git commit -m \"{}\"", commit_message);
         }
     } else {
-        println!("🤖 gAi - AI Powered Git Commit Messages");
+        println!("🤖 gitai - AI Powered Git Commit Messages");
         println!("Use --generate (-g) to create a commit message");
         println!("Use --commit (-c) to commit with the generated message");
-        println!("\nRun 'gai --help' for more options");
+        println!("\nRun 'gitai --help' for more options");
     }
 
     Ok(())
